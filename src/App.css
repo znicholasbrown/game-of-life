@@ -1,24 +1,93 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+body {
+  font-family: "VT323", monospace;
+  background-color: black;
   color: white;
 }
 
-.App-intro {
-  font-size: large;
+.header {
+  text-align: center;
+  font-size: 1.35em;
+  margin-bottom: 1vw;
+}
+.contents {
+  text-align: center;
+  float: right;
+  //position: absolute;
+
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.gameboard {
+  height: 600px;
+  width: 600px;
+  background-color: #311b92;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.geography {
+  height: 630px;
+  width: 630px;
+  position: absolute;
+  border: 15px solid #00BFA5;
+  border-radius: 10px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.space {
+  height: 18.75px;
+  width: 18.75px;
+  border: 1px solid gray;
+  float: left;
+  cursor: default;
+  z-index: -1;
+}
+.square {
+  height: 18.75px;
+  width: 18.75px;
+  float: left;
+}
+
+.unfilled {
+  background-color: transparent;
+}
+
+.filled {
+  background-color: #FF5722;
+}
+
+.options-container {
+  display: inline-block;
+  position: absolute;
+  left: 5%;
+  margin-top: 1.5vw;
+  line-height: 25px;
+  font-size: 30px;
+  float: left;
+  z-index: 15;
+}
+
+.buttons {
+  display: block;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.copyright {
+  font-size: 1.5em;
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  right: 0;
+  left: 0
 }
